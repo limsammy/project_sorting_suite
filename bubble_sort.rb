@@ -7,7 +7,7 @@ def bubble_sort(list)
 
 	while swapped do
 		swapped = false
-		(list_size-2).times do |i|
+		(list_size-1).times do |i|
 			if(list[i] > list[i+1])
 				list[i], list[i+1] = list[i+1], list[i]
 				swapped = true
