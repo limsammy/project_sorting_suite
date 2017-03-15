@@ -1,22 +1,24 @@
 require 'pry'
 
-def bubble_sort(list)
-	list_size = list.length
+class BubbleSort
+	def sort(list)
+		list_size = list.length
 
-	swapped = true
+		swapped = true
 
-	while swapped do
-		swapped = false
-		(list_size-1).times do |i|
-			if(list[i] > list[i+1])
-				list[i], list[i+1] = list[i+1], list[i]
-				swapped = true
+		while swapped do
+			swapped = false
+			(list_size-1).times do |i|
+				if(list[i] > list[i+1])
+					list[i], list[i+1] = list[i+1], list[i]
+					swapped = true
+				end
 			end
+			break if(!swapped)
 		end
-		break if(!swapped)
+		puts "Sorted list: #{list}"
 	end
-	puts "Sorted list: #{list}"
 end
 
-test = [0, 3, 8, 5, 4, 9, 22]
-bubble_sort(test)
+bubble = BubbleSort.new
+bubble.sort([0, 3, 8, 5, 4, 9, 22])
