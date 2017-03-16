@@ -3,8 +3,8 @@
 
 # Benchmark
 ## Bubble
-### 0.056 milliseconds
+### Time elapsed 0.063 milliseconds
 ## Insertion
-### 0.012 milliseconds
+### Time elapsed 0.015000000000000001 milliseconds
 ## Merge
-### 0.030000000000000002 milliseconds
+### Time elapsed 0.049 milliseconds
