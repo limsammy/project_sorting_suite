@@ -1,5 +1,3 @@
-require 'enumerator'
-
 class MergeSort
   def sort(list)
     swapped = true
@@ -24,9 +22,6 @@ class MergeSort
       sorted_list << chunked_list[i][0]
     end
 
-    puts "Sorted list: #{sorted_list}"
+    puts "Sorted list (merge): #{sorted_list}"
   end
 end
-
-merge = MergeSort.new
-merge.sort([0, 3, 8, 5, 4, 9, 22])

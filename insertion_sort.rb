@@ -16,10 +16,6 @@ class InsertionSort
 				index_counter += 1
 			end
 		end
-		puts "Sorted list: #{sorted_list}"
+		puts "Sorted list (insertion): #{sorted_list}"
 	end
 end
-
-
-insertion = InsertionSort.new
-insertion.sort([0, 3, 8, 5, 4, 9, 22])

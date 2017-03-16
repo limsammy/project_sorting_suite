@@ -1,5 +1,3 @@
-require 'pry'
-
 class BubbleSort
 	def sort(list)
 		list_size = list.length
@@ -16,9 +14,6 @@ class BubbleSort
 			end
 			break if !swapped
 		end
-		puts "Sorted list: #{list}"
+		puts "Sorted list (bubble): #{list}"
 	end
 end
-
-bubble = BubbleSort.new
-bubble.sort([0, 3, 8, 5, 4, 9, 22])
