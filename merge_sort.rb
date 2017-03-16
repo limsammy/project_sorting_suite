@@ -25,9 +25,7 @@ class MergeSort
     end
   end
 
+  def output(list)
+    puts "Sorted list (merge): #{sort(list)}"
+  end
 end
-
-merge = MergeSort.new
-merge.sort([0, 3, 8, 5, 4, 9, 22])
-binding.pry
-""

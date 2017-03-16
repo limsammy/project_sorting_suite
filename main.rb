@@ -29,5 +29,5 @@ time_method do
 end
 
 time_method do
-  merge.sort(test_list)
+  merge.output(test_list)
 end
