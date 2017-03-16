@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 class MergeSort
 
@@ -24,7 +24,7 @@ class MergeSort
     (slice_count-1).times do |i|
       sorted_list.push(chunked_list[i][0])
     end
-
+# binding.pry
     puts "Sorted list (merge): #{sorted_list}"
   end
 end
