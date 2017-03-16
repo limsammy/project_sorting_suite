@@ -1,10 +1,9 @@
-require 'pry'
 require 'enumerator'
 
 class MergeSort
   def sort(list)
     swapped = true
-    # final = []
+    sorted_list = []
 
     slice_count = list.size.to_i.floor
     chunked_list = list.each_slice(slice_count).to_a.each{ |element| element.fill nil, slice_count, 0 }.transpose.map(&:compact)
@@ -20,7 +19,12 @@ class MergeSort
       end
       break if !swapped
     end
-    puts "Sorted list: #{chunked_list}"
+
+    (slice_count-1).times do |i|
+      sorted_list << chunked_list[i][0]
+    end
+
+    puts "Sorted list: #{sorted_list}"
   end
 end
 
