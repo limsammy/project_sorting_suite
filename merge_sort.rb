@@ -1,9 +1,12 @@
+require 'pry'
+
 class MergeSort
+
   def sort(list)
     swapped = true
     sorted_list = []
 
-    slice_count = list.size.to_i.floor
+    slice_count = list.size.to_i
     chunked_list = list.each_slice(slice_count).to_a.each{ |element| element.fill nil, slice_count, 0 }.transpose.map(&:compact)
 
     while swapped do
@@ -19,7 +22,7 @@ class MergeSort
     end
 
     (slice_count-1).times do |i|
-      sorted_list << chunked_list[i][0]
+      sorted_list.push(chunked_list[i][0])
     end
 
     puts "Sorted list (merge): #{sorted_list}"
