@@ -8,6 +8,26 @@ bubble = BubbleSort.new
 insertion = InsertionSort.new
 merge = MergeSort.new
 
-bubble.sort(test_list)
-insertion.sort(test_list)
-merge.sort(test_list)
+
+def time_method(method=nil, *args)
+  beginning_time = Time.now
+  if block_given?
+    yield
+  else
+    self.send(method, args)
+  end
+  end_time = Time.now
+  puts "Time elapsed #{(end_time - beginning_time)*1000} milliseconds"
+end
+
+time_method do
+  bubble.sort(test_list)
+end
+
+time_method do
+  insertion.sort(test_list)
+end
+
+time_method do
+  merge.sort(test_list)
+end
