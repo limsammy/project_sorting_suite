@@ -6,10 +6,10 @@ class InsertionSort
 		list.each do |i|
 			index_counter = 0
 			while index_counter < sorted_list.length
-				if(i <= sorted_list[index_counter])
+				if i <= sorted_list[index_counter]
 					sorted_list.insert(index_counter, i)
 					break
-				elsif(index_counter == sorted_list.length-1)
+				elsif index_counter == sorted_list.length-1
 					sorted_list.insert(index_counter+1, i)
 					break
 				end
